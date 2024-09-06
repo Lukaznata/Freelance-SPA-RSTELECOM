@@ -2,7 +2,7 @@
 
 ## Link Para Acessar
 
-https://rs-telecom.vercel.app/
+https://fluentemente-language-school.vercel.app/
 
 
 Este é um projeto de página única (SPA) para uma empresa que vende planos de internet fibra ótica. O site apresenta um layout responsivo com um carrossel Bootstrap, menu lateral e cards interativos que redirecionam os usuários para o WhatsApp para consultas de vendas e suporte.
