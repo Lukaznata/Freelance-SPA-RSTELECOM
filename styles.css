@@ -1,0 +1,831 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela&family=Varela+Round&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#plansNavigation {
+  width: 100%;
+  height: 1rem;
+  padding-top: 3rem;
+}
+
+nav {
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 10vh;
+  width: 100%;
+  padding: 0 10%;
+  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.mobile-menu {
+  display: none;
+}
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background-color: #ff7300;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list a {
+  font-family: "Work sans", sans-serif;
+  color: #242424;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+  font-size: 13px;
+}
+.nav-list a:hover {
+  opacity: 0.7;
+  color: #ff7300;
+}
+
+.nav-list li {
+  list-style: none;
+  letter-spacing: 3px;
+  margin-left: 32px;
+  font-weight: 500;
+}
+
+.whatsIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 2rem;
+  width: 60px;
+  height: 60px;
+  background-color: #ff7300;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.whatsIcon:hover {
+  background-color: #60b900;
+  transform: scale(1.1);
+}
+
+.fa-whatsapp {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+#container-fluid {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  margin-top: 6rem;
+  width: 50vw;
+}
+
+.carousel-inner {
+  height: fit-content;
+  border-radius: 15px;
+}
+
+.carousel-indicators button {
+  background-color: rgb(255, 94, 0) !important;
+  border: none !important;
+  border-radius: 15px !important;
+  background-clip: inherit !important;
+  height: 8px !important;
+  width: 8px !important;
+  margin-right: 10px !important;
+  margin-left: 10px !important;
+}
+
+#objectives {
+  width: 80%;
+  margin-top: 0rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.outContainer {
+  width: 45%;
+  padding-top: 3rem;
+  min-width: 30rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.mission,
+.support {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  padding-top: 6rem;
+  box-shadow: 6px 6px 6px 0 rgba(46, 21, 0, 0.3);
+}
+
+.mission p,
+.support p {
+  text-align: center;
+  color: #2929299c;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.objectiveOutSquare {
+  top: 0;
+  left: 0;
+  margin-left: 3%;
+  position: absolute;
+  width: 20%;
+  height: 40%;
+  background: linear-gradient(
+    93deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(205, 205, 205, 1) 100%
+  );
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.objectiveInSquare {
+  width: 80%;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  background: linear-gradient(
+    93deg,
+    rgba(205, 205, 205, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.objectiveInSquare i {
+  font-size: 3rem;
+}
+.fa-rocket {
+  color: #ff9b2f;
+}
+
+.fa-toolbox {
+  color: #004bc4;
+}
+
+.objectiveName {
+  top: 0;
+  margin-top: 1.8rem;
+  width: 60%;
+  height: 19%;
+  margin-left: 16%;
+  position: absolute;
+  background: linear-gradient(
+    93deg,
+    rgba(205, 205, 205, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.objectiveName h2 {
+  padding-top: 0.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.missionObj h2 {
+  color: #ff9b2f;
+}
+
+.supportObj h2 {
+  color: #004bc4;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.about .slogan {
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    130deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(2, 0, 54, 1) 100%
+  );
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 4px 6px 6px 0 rgba(0, 0, 0, 0.5);
+}
+.about .slogan h1 {
+  color: #cbcbcb;
+  text-transform: uppercase;
+}
+.about .slogan span {
+  color: #ff6708;
+  text-shadow: 0 0 2px #fff, 0 0 10px rgb(229, 144, 74),
+    0 0 20px rgb(229, 144, 74);
+  text-decoration: wavy;
+  font-style: italic;
+  animation: glowing 3s infinite;
+  font-size: 2rem;
+}
+
+.titleAbout h1 {
+  color: #ff6708;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 2px 1px rgba(93, 36, 0, 0.2);
+}
+
+.contentAbout {
+  width: 50%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #7d7d7d;
+  font-weight: 500;
+}
+
+.plans {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.planCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  background: linear-gradient(
+    130deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(2, 0, 54, 1) 100%
+  );
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.4);
+  width: 60%;
+  padding: 0 5% 40px;
+  border-radius: 1rem;
+}
+
+.planTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+}
+.planTitle h3 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: #ff6708;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 2px #fff, 0 0 10px rgb(229, 144, 74),
+    0 0 20px rgb(229, 144, 74);
+
+  animation: glowing 3s infinite;
+  padding: 0 30px;
+}
+
+.planTitle span {
+  animation: flicker 6.5s infinite;
+}
+.planTitle .delay1 {
+  animation-delay: 0.8s;
+}
+.planTitle .delay2 {
+  animation-delay: 1.5s;
+}
+.planTitle .delay3 {
+  animation-delay: 1.8s;
+}
+
+.planTitle p {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff6708;
+  text-shadow: 0 0 1px #fff, 0 0 5px rgb(229, 144, 74);
+}
+
+.planContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+}
+.planTopics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+  gap: 0.5rem;
+}
+
+.planTopics p {
+  color: #cacaca;
+  font-weight: 500;
+  text-align: center;
+}
+.planTopics strong {
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff6708;
+  text-align: center;
+  text-shadow: 0 0 1px #fff, 0 0 1px rgb(229, 144, 74);
+}
+
+.btn-contato {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(
+    146deg,
+    rgb(245, 133, 64) 0%,
+    rgb(217, 68, 10) 100%
+  );
+  letter-spacing: 2px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  animation: pulseButton 4s linear infinite;
+  transition: 0.25s linear;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.btn-contato:hover {
+  color: #ff6708;
+  background: none;
+  background-color: #fff;
+}
+
+#aboutPlans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 20px;
+  gap: 1.3rem;
+  margin-bottom: 3rem;
+}
+
+.aboutPlansTitle {
+  background: linear-gradient(
+    146deg,
+    rgba(255, 103, 8, 1) 0%,
+    rgb(232, 89, 32) 100%
+  );
+  padding: 5px 8px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  box-shadow: 5px 6px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.aboutPlansTitle h2 {
+  color: #f5f5f5;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 2px 1px rgba(93, 36, 0, 0.2);
+}
+
+.aboutPlansContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutPlansContent strong {
+  font-size: 1.3rem;
+  color: #ff6708;
+}
+.aboutPlansContent div {
+  display: flex;
+  margin: 10px 0;
+  gap: 1rem;
+}
+.aboutPlansContent div p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #c22700e6;
+  text-align: center;
+}
+.aboutPlansContent div i {
+  font-size: 1.5rem;
+  color: #ff6708;
+}
+
+.offers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 20px 20%;
+  background-color: #e1e1e1;
+  border-radius: 20px;
+  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.offers p {
+  color: #666666c9;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+.offers p span {
+  text-transform: uppercase;
+  color: #ff6708ef;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  height: 20rem;
+  background-color: #2a2a2a;
+  padding: 12rem 0;
+}
+
+#footerContent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+footer header {
+  font-size: 2rem;
+  color: #181818;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.footerTopics p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #dedede;
+  font-size: 1rem;
+}
+.footerItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footerItems li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footerItems li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  background-color: rgb(0, 11, 75);
+  border-radius: 1rem;
+}
+
+.withLink span:hover {
+  cursor: pointer;
+  background-color: rgb(187, 96, 0);
+}
+
+.footerItems li i {
+  font-size: 1rem;
+  color: #eaeaea;
+}
+.footerItems p {
+  width: 50%;
+  color: #a6a6a6;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@media (max-width: 999px) {
+  nav {
+    position: fixed;
+    z-index: 99;
+    padding: 0;
+    margin: 0;
+  }
+  .logo {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo img {
+    object-fit: contain;
+    width: 80%;
+    height: 100%;
+  }
+
+  .menu {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-list {
+    position: absolute;
+    width: 50vw;
+    top: 10vh;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  #container-fluid {
+    padding: 3rem 0 !important;
+  }
+  .carousel {
+    width: 90vw;
+    margin-top: 60px;
+  }
+
+  .carousel-inner {
+    height: 200px;
+  }
+
+  .carousel-item {
+    height: 200px;
+  }
+
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .mobile-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+
+  #objectives {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+
+  .outContainer {
+    width: 80%;
+    height: 12rem;
+    padding-top: 3rem;
+    min-width: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mission,
+  .support {
+    padding: 2rem;
+    padding-top: 4rem;
+  }
+  .mission p,
+  .support p {
+    font-size: 0.9rem;
+  }
+
+  .objectiveOutSquare {
+    width: 20%;
+    height: 35%;
+  }
+
+  .objectiveInSquare i {
+    font-size: 2rem;
+  }
+
+  .objectiveName {
+    height: 15%;
+  }
+
+  .objectiveName h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .about {
+    margin: 0;
+  }
+
+  .contentAbout {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .plans {
+    width: 100vw;
+  }
+
+  .planCard {
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 40px;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .aboutPlansTitle h2 {
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 2px 1px rgba(93, 36, 0, 0.2);
+  }
+
+  .offers {
+    width: 90vw;
+    padding: 20px;
+  }
+
+  #footerContent {
+    width: 80%;
+  }
+}
+
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.1);
+  }
+
+  20% {
+    transform: scale(1.15);
+  }
+  35% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 10px rgb(229, 144, 74),
+      0 0 20px rgb(229, 144, 74);
+  }
+  50% {
+    text-shadow: 0 0 1px #fff, 0 0 2px rgb(229, 144, 74),
+      0 0 20px rgb(229, 144, 74);
+  }
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 10px rgb(229, 144, 74),
+      0 0 20px rgb(229, 144, 74);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  2% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  6% {
+    opacity: 0;
+  }
+  7% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
